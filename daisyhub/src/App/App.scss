@@ -1,0 +1,47 @@
+@import '../features/ui/bootstrap/variables';
+
+.app {
+  background-image: url(./bg.png);
+}
+
+.app-container {
+  padding-top: 2rem;
+  perspective: 1200px;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.page {
+  backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
+}
+
+.page-enter {
+  animation: moveFromBottom 0.3s ease both;
+}
+
+.page-enter-active {
+}
+
+.page-exit {
+  opacity: 1;
+}
+
+.page-exit-active {
+  opacity: 0;
+  transition: opacity 300ms;
+}
+
+@keyframes moveToTop {
+  from {
+  }
+  to {
+    transform: translateY(-30%);
+  }
+}
+
+@keyframes moveFromBottom {
+  from {
+    transform: translateY(30%);
+  }
+}

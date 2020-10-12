@@ -1,0 +1,38 @@
+@import '../../ui/bootstrap/variables.scss';
+
+.navbar-collapse {
+  text-align: center;
+}
+
+.navigation__toggler {
+  border: none;
+}
+
+.navigation__toggler-icon {
+  background-color: $gray-700;
+  border-radius: 3px;
+  display: block;
+  height: 3px;
+  margin: 0.25rem 0;
+  transition: all 0.3s ease-in-out;
+  width: 2rem;
+}
+
+.navigation__toggler-icon:nth-child(1) {
+  width: 50%;
+}
+
+.navigation__toggler-icon:nth-child(3) {
+  margin-left: auto;
+  width: 50%;
+}
+
+.navigation__toggler:hover .navigation__toggler-icon {
+  width: 2rem;
+}
+
+@media (min-width: map-get($grid-breakpoints, 'md')) {
+  .navbar-collapse {
+    justify-content: flex-end;
+  }
+}

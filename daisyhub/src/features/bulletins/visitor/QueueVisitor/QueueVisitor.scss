@@ -1,0 +1,9 @@
+@import '../../../ui/bootstrap/variables.scss';
+
+.visitors-table td {
+  white-space: nowrap;
+}
+
+.visitors-table td:first-child {
+  width: 50%;
+}

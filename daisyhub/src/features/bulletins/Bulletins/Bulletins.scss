@@ -1,0 +1,26 @@
+@import '../../ui/bootstrap/variables';
+
+.bulletins {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: map-get($grid-breakpoints, 'sm')) {
+  .bulletins {
+    display: block;
+    column-count: 2;
+  }
+}
+
+@media (min-width: map-get($grid-breakpoints, 'lg')) {
+  .bulletins {
+    column-count: 3;
+  }
+}
+
+@media (min-width: map-get($grid-breakpoints, 'xl')) {
+  .bulletins {
+    column-count: 4;
+  }
+}
