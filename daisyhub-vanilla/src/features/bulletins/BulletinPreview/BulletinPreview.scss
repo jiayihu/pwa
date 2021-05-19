@@ -1,0 +1,40 @@
+@import '../../ui/bootstrap/variables.scss';
+
+.bulletin {
+  border-radius: 2rem;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  margin-bottom: 1rem;
+  max-width: 20rem;
+  min-width: 15rem;
+  padding: 1rem;
+}
+
+.bulletin--apple {
+  background-color: #f1aeaf;
+}
+
+.bulletin--cherry {
+  background-color: #e55552;
+}
+
+.bulletin--orange {
+  background-color: #ffc599;
+}
+
+.bulletin--peach {
+  background-color: #f5e0ba;
+}
+
+.bulletin--pear {
+  background-color: #cfdfac;
+}
+
+.bulletin__fruit {
+  align-self: center;
+  height: 8rem;
+  margin: 1rem 0;
+  width: 8rem;
+}

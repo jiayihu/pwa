@@ -1,0 +1,22 @@
+@import 'features/ui/bootstrap/variables';
+@import 'features/ui/bootstrap/bootstrap';
+@import 'features/ui/utilities/index';
+
+html {
+  font-size: 14px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  color: $gray-900;
+}
