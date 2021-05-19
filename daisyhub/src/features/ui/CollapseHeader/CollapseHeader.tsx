@@ -1,5 +1,4 @@
 import './CollapseHeader.scss';
-import React from 'react';
 import classnames from 'classnames';
 import { FeatherIcons } from '../FeatherIcons/FeatherIcons';
 

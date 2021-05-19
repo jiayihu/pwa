@@ -22,7 +22,7 @@ function* watchVisitorsSaga(action: ReturnType<typeof actions.subscribeToVisitor
   const source = getRealtimeVisitors(bulletinId);
   const channel: EventChannel<Visitor[]> = yield call(createRealTimeChannel, source);
 
-  const id = yield call(readVisitorId, bulletinId);
+  const id: string | null = yield call(readVisitorId, bulletinId);
   if (id) yield put(actions.setBulletinVisitorId(id));
 
   try {
@@ -41,8 +41,8 @@ function* watchVisitorsSaga(action: ReturnType<typeof actions.subscribeToVisitor
         yield put(actions.updateVisitors(message));
 
         // Check if user has been removed by the host
-        const visitorId = yield select(selectBulletinVisitorId);
-        if (visitorId && !visitors.find(x => x.id === visitorId)) {
+        const visitorId: string | null = yield select(selectBulletinVisitorId);
+        if (visitorId && !visitors.find((x) => x.id === visitorId)) {
           removeVisitorFromHistory(visitorId);
           yield put(actions.setBulletinVisitorId(null));
         }
@@ -58,7 +58,11 @@ function* watchVisitorsSaga(action: ReturnType<typeof actions.subscribeToVisitor
 function* addBulletinVisitorSaga(action: ReturnType<typeof actions.addBulletinVisitor>) {
   try {
     const { bulletinId, name } = action.payload;
-    const response = yield call<typeof addBulletinVisitor>(addBulletinVisitor, bulletinId, name);
+    const response: { id: string } = yield call<typeof addBulletinVisitor>(
+      addBulletinVisitor,
+      bulletinId,
+      name,
+    );
     yield put(actions.setBulletinVisitorId(response.id));
     yield call(saveVisitorToHistory, bulletinId, response.id);
   } catch (error) {
@@ -74,7 +78,7 @@ function* removeBulletinVisitorSaga(action: ReturnType<typeof actions.removeBull
   try {
     const { bulletinId, visitorId } = action.payload;
     yield call<typeof removeBulletinVisitor>(removeBulletinVisitor, bulletinId, visitorId);
-    const activeVisitorId = yield select(selectBulletinVisitorId);
+    const activeVisitorId: string | null = yield select(selectBulletinVisitorId);
 
     if (activeVisitorId === visitorId) {
       // The user is removing himself, aka leaving the queue

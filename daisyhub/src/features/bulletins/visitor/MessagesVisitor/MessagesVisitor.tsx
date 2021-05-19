@@ -1,5 +1,5 @@
 import './MessagesVisitor.scss';
-import React, { useState, useCallback, useMemo } from 'react';
+import { useState, useCallback, useMemo } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {
   subscribeToMessages,
@@ -38,7 +38,7 @@ export const MessagesVisitor = (props: Props) => {
   const [messageText, setMessageText] = useState('');
   const visitors = useSelector(selectBulletinVisitors);
   const visitorId = useSelector(selectBulletinVisitorId);
-  const visitor = visitorId && (visitors.find(x => x.id === visitorId) || null);
+  const visitor = visitorId && (visitors.find((x) => x.id === visitorId) || null);
 
   const orderedMessages = [...messages].sort((a, b) =>
     new Date(a.creationDate) > new Date(b.creationDate) ? 1 : -1,
@@ -67,7 +67,7 @@ export const MessagesVisitor = (props: Props) => {
       <h3>Messages</h3>
       <div className="pb-3">
         {orderedMessages.length ? (
-          orderedMessages.map(message => (
+          orderedMessages.map((message) => (
             <SimpleMessage
               isHost={message.authorId === bulletin.ownerId}
               message={message}
@@ -86,7 +86,7 @@ export const MessagesVisitor = (props: Props) => {
               className="form-control"
               required
               value={messageText}
-              onChange={event => setMessageText(event.target.value)}
+              onChange={(event) => setMessageText(event.target.value)}
               disabled={!visitorId}
               placeholder="Send a message to everyone"
             />

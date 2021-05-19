@@ -1,5 +1,4 @@
 import './Notifications.scss';
-import React from 'react';
 import { Toast, ToastHeader, ToastBody } from 'reactstrap';
 import { useSelector, useDispatch } from 'react-redux';
 import { selectNotifications } from '../../../store/reducers';

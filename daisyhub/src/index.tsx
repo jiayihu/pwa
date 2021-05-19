@@ -1,5 +1,5 @@
 import './index.scss';
-import React from 'react';
+
 import ReactDOM from 'react-dom';
 import * as firebase from 'firebase/app';
 import 'firebase/analytics';

@@ -1,6 +1,6 @@
 /* eslint-disable */
 
-import React, { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { Button } from 'reactstrap';
 import { urlBase64ToUint8Array } from '../../../utilities/utils';
 import { createPushSubscription } from '../../../services/push-notifications.service';

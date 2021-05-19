@@ -1,4 +1,3 @@
-import React from 'react';
 import { FieldWithMessageProps, FieldWithMessage } from './FieldWithMessage';
 import { Input, InputProps } from 'reactstrap';
 

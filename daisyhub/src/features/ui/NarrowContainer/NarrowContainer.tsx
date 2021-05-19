@@ -1,5 +1,4 @@
 import './NarrowContainer.scss';
-import React from 'react';
 
 type Props = {
   hasBg?: boolean;

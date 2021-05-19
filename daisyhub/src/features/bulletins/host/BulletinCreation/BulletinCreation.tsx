@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Col, Collapse, FormGroup, Label, Spinner, Button, Row } from 'reactstrap';
 import { format, parse } from 'date-fns';
 import { Form, Formik } from 'formik';
@@ -91,7 +91,7 @@ export const BulletinCreation = () => {
               .max(ref('queue'), 'You cannot exceed your queue limits '),
           }),
         })}
-        onSubmit={fields => {
+        onSubmit={(fields) => {
           const date = parse(fields.date, 'yyyy-MM-dd', new Date());
           const time = parse(fields.time, 'HH:mm', new Date());
           date.setHours(time.getHours());

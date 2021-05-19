@@ -1,3 +1,5 @@
+/* eslint-disable no-restricted-globals */
+
 /** @type {ServiceWorkerGlobalScope} */
 var _self = self;
 

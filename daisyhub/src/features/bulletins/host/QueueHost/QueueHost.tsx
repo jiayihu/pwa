@@ -1,5 +1,5 @@
 import './QueueHost.scss';
-import React, { useMemo } from 'react';
+import { useMemo } from 'react';
 import { useDispatch } from 'react-redux';
 import { lockBulletinQueue } from '../../../../store/actions/bulletin.actions';
 import {

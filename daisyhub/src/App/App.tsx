@@ -1,5 +1,4 @@
 import './App.scss';
-import React from 'react';
 import { Switch, Route, useLocation } from 'react-router-dom';
 import { NotFound } from '../features/404/NotFound';
 import { Bulletins } from '../features/bulletins/Bulletins/Bulletins';

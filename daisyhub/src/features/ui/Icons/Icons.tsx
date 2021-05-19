@@ -1,5 +1,5 @@
 import './Icons.scss';
-import React, { SVGProps } from 'react';
+import { SVGProps } from 'react';
 import { ReactComponent as Apple } from './svg/apple.svg';
 import { ReactComponent as Cherries } from './svg/cherries.svg';
 import { ReactComponent as Orange } from './svg/orange.svg';

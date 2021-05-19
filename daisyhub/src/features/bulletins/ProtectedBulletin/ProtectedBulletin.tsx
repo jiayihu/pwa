@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useRouteMatch } from 'react-router-dom';
 import { readOwnerId } from '../../../services/bulletin-history.service';
 import { BulletinHost } from '../host/BulletinHost/BulletinHost';

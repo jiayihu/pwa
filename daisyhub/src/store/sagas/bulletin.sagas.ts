@@ -21,7 +21,7 @@ import {
 
 function* fetchBulletinsSaga() {
   try {
-    const bulletins = yield call(getBulletins);
+    const bulletins: Bulletin[] = yield call(getBulletins);
     yield put(actions.getBulletinsSucceeded(bulletins));
   } catch (error) {
     yield* handleSagaError(error);
@@ -33,7 +33,7 @@ function* watchBulletinSaga(action: ReturnType<typeof actions.getBulletin>) {
   const source = getRealtimeBulletin(bulletinId);
 
   // Try to retrieve a static version from the list
-  const bulletin = yield select(selectStaticBulletin(bulletinId));
+  const bulletin: Bulletin = yield select(selectStaticBulletin(bulletinId));
   if (bulletin) yield put(actions.updateBulletin(bulletin));
 
   // Start real-time updates

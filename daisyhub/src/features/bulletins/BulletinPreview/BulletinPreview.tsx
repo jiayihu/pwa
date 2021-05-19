@@ -1,5 +1,4 @@
 import './BulletinPreview.scss';
-import React from 'react';
 import { Bulletin } from '../../../types/bulletin';
 import { format } from 'date-fns';
 import classnames from 'classnames';

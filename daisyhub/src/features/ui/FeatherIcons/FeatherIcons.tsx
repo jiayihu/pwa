@@ -1,5 +1,5 @@
 import './FeatherIcons.scss';
-import React, { SVGAttributes } from 'react';
+import { SVGAttributes } from 'react';
 import classnames from 'classnames';
 import sprite from './feather-sprite.svg';
 

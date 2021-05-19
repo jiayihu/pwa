@@ -1,4 +1,3 @@
-import React from 'react';
 import { Modal, ModalHeader, ModalBody, ModalFooter, Button } from 'reactstrap';
 import { ColorVariant } from '../../../types/bootstrap';
 

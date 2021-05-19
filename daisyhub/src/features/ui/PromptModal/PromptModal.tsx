@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Modal, ModalHeader, ModalBody, ModalFooter, Button, Input, InputProps } from 'reactstrap';
 
 type Props = {
@@ -18,7 +18,7 @@ export const PromptModal = (props: Props) => {
     <Modal isOpen={isOpen} toggle={onCancel}>
       <ModalHeader toggle={onCancel}>Confirm</ModalHeader>
       <form
-        onSubmit={event => {
+        onSubmit={(event) => {
           event.preventDefault();
           onConfirm(value);
         }}
@@ -29,7 +29,7 @@ export const PromptModal = (props: Props) => {
             type="text"
             value={value}
             required
-            onChange={event => setValue(event.target.value)}
+            onChange={(event) => setValue(event.target.value)}
             {...inputProps}
           />
         </ModalBody>

@@ -1,5 +1,5 @@
 import './MessagesHost.scss';
-import React, { useState, useCallback, useMemo } from 'react';
+import { useState, useCallback, useMemo } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {
   subscribeToMessages,
@@ -61,7 +61,7 @@ export const MessagesHost = (props: Props) => {
       <h3>Messages</h3>
       <div className="pb-3">
         {orderedMessages.length ? (
-          orderedMessages.map(message => (
+          orderedMessages.map((message) => (
             <SimpleMessage
               isHost={message.authorId === bulletin.ownerId}
               message={message}
@@ -80,7 +80,7 @@ export const MessagesHost = (props: Props) => {
               className="form-control"
               required
               value={messageText}
-              onChange={event => setMessageText(event.target.value)}
+              onChange={(event) => setMessageText(event.target.value)}
               placeholder="Send a message to everyone"
             />
           </Col>

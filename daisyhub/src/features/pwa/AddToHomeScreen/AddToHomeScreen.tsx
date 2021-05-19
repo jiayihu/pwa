@@ -1,6 +1,6 @@
 /* eslint-disable */
 
-import React, { useRef, useCallback, useState } from 'react';
+import { useRef, useCallback, useState } from 'react';
 import { useEventListener } from '../../../hooks/useEventListener';
 import { useSelector } from 'react-redux';
 import { selectBulletinVisitorId, selectBulletinOwnerId } from '../../../store/reducers';

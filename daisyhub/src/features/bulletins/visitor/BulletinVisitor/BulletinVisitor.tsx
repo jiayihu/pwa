@@ -1,5 +1,5 @@
 import './BulletinVisitor.scss';
-import React, { useState, useCallback, useMemo } from 'react';
+import { useState, useCallback, useMemo } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import {
   subscribeToBulletin,

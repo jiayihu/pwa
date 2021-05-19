@@ -1,5 +1,5 @@
 import './NavigationItems.scss';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Navbar, Nav, NavLink, NavItem, Collapse, NavbarToggler } from 'reactstrap';
 import { NavLink as RRNavLink, Link } from 'react-router-dom';
 

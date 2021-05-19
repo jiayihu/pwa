@@ -1,5 +1,5 @@
 import './QueueVisitor.scss';
-import React, { useState, useCallback, useMemo } from 'react';
+import { useState, useCallback, useMemo } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {
   subscribeToVisitors,
@@ -18,7 +18,7 @@ export type Props = {
 };
 
 const isActiveVisitor = (visitors: Visitor[], visitorId: string, concurrent: number): boolean => {
-  const index = visitors.findIndex(x => x.id === visitorId);
+  const index = visitors.findIndex((x) => x.id === visitorId);
 
   return index !== -1 && index < concurrent;
 };
@@ -86,7 +86,7 @@ export const QueueVisitor = (props: Props) => {
             className="form-control"
             required
             value={visitorName}
-            onChange={event => setVisitorName(event.target.value)}
+            onChange={(event) => setVisitorName(event.target.value)}
             placeholder="Your name in the game"
           />
         </FormGroup>

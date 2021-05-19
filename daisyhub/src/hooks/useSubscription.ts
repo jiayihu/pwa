@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+
 import { Selector, useSelector } from 'react-redux';
 import { useEffect, DependencyList } from 'react';
 

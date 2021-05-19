@@ -1,5 +1,4 @@
 import './BulletinDetails.scss';
-import React from 'react';
 import { format, isEqual } from 'date-fns';
 import turnipImg from './turnip.png';
 import { Icons } from '../../ui/Icons/Icons';

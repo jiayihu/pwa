@@ -1,4 +1,3 @@
-import React from 'react';
 import { Field, ErrorMessage, FieldProps, getIn } from 'formik';
 import { FormFeedback } from 'reactstrap';
 
@@ -19,7 +18,7 @@ export const FieldWithMessage = (props: FieldWithMessageProps) => {
           return renderField(fieldProps, isInvalid);
         }}
       </Field>
-      <ErrorMessage name={name}>{msg => <FormFeedback>{msg}</FormFeedback>}</ErrorMessage>
+      <ErrorMessage name={name}>{(msg) => <FormFeedback>{msg}</FormFeedback>}</ErrorMessage>
     </>
   );
 };

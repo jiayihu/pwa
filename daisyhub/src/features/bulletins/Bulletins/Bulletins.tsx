@@ -1,5 +1,5 @@
 import './Bulletins.scss';
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { getBulletins } from '../../../store/actions/bulletin.actions';
 import { History } from 'history';
 import { CardColumns, Alert } from 'reactstrap';
@@ -36,7 +36,7 @@ export const Bulletins = (_: Props) => {
 
   return (
     <CardColumns className="bulletins">
-      {orderedBulletins.map(bulletin => (
+      {orderedBulletins.map((bulletin) => (
         <BulletinPreview bulletin={bulletin} key={bulletin.id} />
       ))}
     </CardColumns>

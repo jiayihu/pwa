@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const Footer = () => {
   return (
     <div className="mt-5 py-3 text-muted text-center">
