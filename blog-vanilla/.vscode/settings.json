@@ -1,0 +1,7 @@
+// Inserire le impostazioni in questo file per sovrascrivere quelle utente e predefinite.
+{
+  "[css]": {
+    "editor.formatOnSave": false
+  },
+  "html.validate.styles": false
+}
