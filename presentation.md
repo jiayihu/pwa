@@ -134,6 +134,8 @@ No insufficient storage space
 PhoneGap
 Electron
 React Native
+Flutter
+Blazor
 
 - Unibiquity
 - Linkability
@@ -633,7 +635,7 @@ self.addEventListener('fetch', (event) => {
 In the UI:
 
 ```js
-const networkDataReceived = false;
+let networkDataReceived = false;
 
 const fetchRequest = fetch('/data.json')
   .then((response) => response.json())
